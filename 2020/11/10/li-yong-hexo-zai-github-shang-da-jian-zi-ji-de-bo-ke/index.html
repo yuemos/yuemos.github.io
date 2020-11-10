@@ -393,12 +393,35 @@
 <p>至此，我们已经在本地安装好hexo并且搭建好我们博客的基础框架了。</p>
 <h3 id="链接远程库"><a href="#链接远程库" class="headerlink" title="链接远程库"></a>链接远程库</h3><h4 id="第一步-将本地的库与github联系起来"><a href="#第一步-将本地的库与github联系起来" class="headerlink" title="第一步 将本地的库与github联系起来"></a>第一步 将本地的库与github联系起来</h4><ol>
 <li><p>进入blog文件夹，右击，“Git Bush Here”，执行</p>
-<figure class="highlight plain"><figcaption><span>~/.ssh````用于检查.ssh文件是否存在</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 如果不存在，执行&#96;ssh -keyben -t -rsa -C &quot;github邮箱&quot;&#96;</span><br><span class="line"></span><br><span class="line">3. 进入文件夹C:\user\Administrator\\.shh会看到两个文件：id_rsa和id_rsa.pub</span><br><span class="line"></span><br><span class="line">4. 在git Bush界面执行&#96;eval &quot;$(ssh-agent -s)&quot;&#96;添加秘钥到ssh-agent中</span><br><span class="line"></span><br><span class="line">5. 执行&#96;ssh -add ~&#x2F;.ssh&#x2F;id_rsa&#96;添加生成的ssh key到ssh-agent中</span><br><span class="line"></span><br><span class="line">6. 利用记事本本打开id_rsa.pub，全选复制文件中的内容</span><br><span class="line"></span><br><span class="line">7. 登录github账号，点击头像选择-&gt;Settings-&gt;SSH and CPG keys，选择右上角的“New SSH key”，将复制的内容粘贴到key中。点击&quot;Add SSH key&quot;按钮</span><br><span class="line"></span><br><span class="line">8. 执行&#96;ssh -T git@github.com&#96;,如果看到以下内容则说明添加ssh成功</span><br><span class="line"></span><br><span class="line">   ![avatar](D:\document\blog\source\photo\ssh.png)</span><br><span class="line"></span><br><span class="line">#### 第二步 配置本地文件</span><br><span class="line"></span><br><span class="line">1. github新建repository，注意repository name只能填&#96;用户名.github,io&#96;，同时要确保仓库中至少要有一个文件才能访问</span><br><span class="line"></span><br><span class="line">2. 复制仓库的ssh链接</span><br><span class="line"></span><br><span class="line">   ![avatar](D:\document\blog\source\photo\copy_ssh.png)</span><br><span class="line"></span><br><span class="line">3. 利用记事本打开blog文件夹下的_config.yml文件，翻到最下方，将内容修改为</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>deploy</p>
+<p><code>cd ~/.ssh</code>用于检查.ssh文件是否存在</p>
+</li>
+<li><p>如果不存在，执行<code>ssh -keyben -t -rsa -C &quot;github邮箱&quot;</code></p>
+</li>
+<li><p>进入文件夹C:\user\Administrator\.shh会看到两个文件：id_rsa和id_rsa.pub</p>
+</li>
+<li><p>在git Bush界面执行<code>eval &quot;$(ssh-agent -s)&quot;</code>添加秘钥到ssh-agent中</p>
+</li>
+<li><p>执行<code>ssh -add ~/.ssh/id_rsa</code>添加生成的ssh key到ssh-agent中</p>
+</li>
+<li><p>利用记事本本打开id_rsa.pub，全选复制文件中的内容</p>
+</li>
+<li><p>登录github账号，点击头像选择-&gt;Settings-&gt;SSH and CPG keys，选择右上角的“New SSH key”，将复制的内容粘贴到key中。点击”Add SSH key”按钮</p>
+</li>
+<li><p>执行<code>ssh -T git@github.com</code>,如果看到以下内容则说明添加ssh成功</p>
+<p><img src="D:\document\blog\source\photo\ssh.png" alt="avatar"></p>
+</li>
+</ol>
+<h4 id="第二步-配置本地文件"><a href="#第二步-配置本地文件" class="headerlink" title="第二步 配置本地文件"></a>第二步 配置本地文件</h4><ol>
+<li><p>github新建repository，注意repository name只能填<code>用户名.github,io</code>，同时要确保仓库中至少要有一个文件才能访问</p>
+</li>
+<li><p>复制仓库的ssh链接</p>
+<p><img src="D:\document\blog\source\photo\copy_ssh.png" alt="avatar"></p>
+</li>
+<li><p>利用记事本打开blog文件夹下的_config.yml文件，翻到最下方，将内容修改为</p>
+<p>`deploy</p>
 <pre><code>type: git
 repository: 复制的仓库的SSH链接
-branch: master</code></pre>
-<pre><code></code></pre>
+branch: master`</code></pre>
 </li>
 </ol>
 <h4 id="将本地文件推到github"><a href="#将本地文件推到github" class="headerlink" title="将本地文件推到github"></a>将本地文件推到github</h4><ol>
@@ -408,13 +431,11 @@ branch: master</code></pre>
 <p><img src="D:\document\blog\source\photo\repository.png" alt="avatar"></p>
 </li>
 <li><p>将本地的博客推送到github上，我们需要使用到hexo下的deploy，这里我们要先安装，在Git Bush Here窗口中输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
+<p><code>npm install hexo-deployer-git --save</code></p>
 <p>现在我们可以向github推送我们的博客了。</p>
 </li>
 <li><p>为了方便访问，我们会将静态网页推送到网站上，首先我们要将md文件生成静态网页，然后再部署到github上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo g &#x2F;&#x2F;g gerenate 生成 将md文件生成静态网页 </span><br><span class="line">hexo d &#x2F;&#x2F;d deploy 部署 将静态网页部署到github</span><br><span class="line">当然以上两条指令也可以简写成下边两句之一</span><br><span class="line">hexo d -g</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-
+<p><code>hexo g //g gerenate 生成 将md文件生成静态网页  hexo d //d deploy 部署 将静态网页部署到github 当然以上两条指令也可以简写成下边两句之一 hexo d -g hexo g -d</code></p>
 <p>每次修改完本地文件或新建博客后都要执行这两句，也可以在这两句前再加上<code>hexo clean</code>先清除本地缓存再生成部署。</p>
 </li>
 <li><p>现在，我们就可以通过<code>用户名.github.io</code>来访问我们的个人博客了！</p>
