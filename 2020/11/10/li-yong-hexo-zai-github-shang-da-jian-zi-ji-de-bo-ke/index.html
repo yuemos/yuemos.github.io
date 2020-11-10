@@ -417,10 +417,10 @@
 <p><img src="D:\document\blog\source\photo\copy_ssh.png" alt="avatar"></p>
 </li>
 <li><p>利用记事本打开blog文件夹下的_config.yml文件，翻到最下方，将内容修改为</p>
-<p>`deploy</p>
-<pre><code>type: git
-repository: 复制的仓库的SSH链接
-branch: master`</code></pre>
+<p><code>deploy</code></p>
+<pre><code>`type: git`
+`repository: 复制的仓库的SSH链接`
+`branch: master`</code></pre>
 </li>
 </ol>
 <h4 id="将本地文件推到github"><a href="#将本地文件推到github" class="headerlink" title="将本地文件推到github"></a>将本地文件推到github</h4><ol>
@@ -434,7 +434,9 @@ branch: master`</code></pre>
 <p>现在我们可以向github推送我们的博客了。</p>
 </li>
 <li><p>为了方便访问，我们会将静态网页推送到网站上，首先我们要将md文件生成静态网页，然后再部署到github上</p>
-<p><code>hexo g //g gerenate 生成 将md文件生成静态网页  hexo d //d deploy 部署 将静态网页部署到github 当然以上两条指令也可以简写成下边两句之一 hexo d -g hexo g -d</code></p>
+<p><code>hexo g //g gerenate 生成 将md文件生成静态网页 </code><br><code>hexo d //d deploy 部署 将静态网页部署到github</code><br>当然以上两条指令也可以简写成下边两句之一</p>
+<p><code>hexo d -g</code></p>
+<p><code>hexo g -d</code></p>
 <p>每次修改完本地文件或新建博客后都要执行这两句，也可以在这两句前再加上<code>hexo clean</code>先清除本地缓存再生成部署。</p>
 </li>
 <li><p>现在，我们就可以通过<code>用户名.github.io</code>来访问我们的个人博客了！</p>
