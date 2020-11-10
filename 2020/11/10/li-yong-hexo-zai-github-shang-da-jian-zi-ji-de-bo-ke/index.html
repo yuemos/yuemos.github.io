@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>归档 | Yuemos` Blog</title>
+  <title>【小白都能看懂的安装教程】利用hexo在github上搭建自己的博课 | Yuemos` Blog</title>
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
@@ -306,35 +306,304 @@
   <a target="_blank" rel="noopener" href="https://github.com/yuemos/yuemos.github.io" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 </header>
     <main class="main" style="margin-top: 60px;">
-      <div style="width: 100%;height: 50vh;overflow: hidden;background-image: url('/medias/archiveImg.png');background-size: cover; 
-background-position: center center;">
+      
+
+
+<div class="post-detail-header" style="background: url(/medias/12.png) no-repeat; background-size: cover; 
+  background-position: center center;">
+  
+    <span class="title">【小白都能看懂的安装教程】利用hexo在github上搭建自己的博课</span>
+  
 </div>
-<section class="archive">
-  <div class="archive-content">
-    <ul class="post-archive">
+<div class="row justify-center">
+  <div class="main-content">
+    <article class="post post-detail">
       
       
+      <div class="post-meta">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <span class="post-time">2020-11-10</span>
+      </div>
+      
+      <div class="post-tags-categories">
         
-          
-          <div class="year" data-aos="zoom-in-up">
-              <div class="bullet"></div>
-              <a href="/archives/2020">2020</a>
-          </div>
         
-        <li class="post-item" data-aos="fade-left">
-          <span class="post-date">11-10</span>
-          <a class="post-title" href="/2020/11/10/li-yong-hexo-zai-github-shang-da-jian-zi-ji-de-bo-ke/">【小白都能看懂的安装教程】利用hexo在github上搭建自己的博课</a>
-        </li>
+      </div>
+      <div class="post-content">
+        <p>从高中起养成的写博客的习惯到大学之后就渐渐扔掉了，倒不是说没有什么值得记录的东西了，而是生活中的诱惑多了起来：美食、游戏、旅游……一晃就是三年过去，现在我已经大四，作为一名六年的老程序猿还没有一个自己的博客，真的是天大的罪过。</p>
+<p>之前高中的时候用过博客园和csdn来记录我的OI生涯，但是还是搭建一个自己的博客会令人更有成就感。买域名的价格还好说，租服务器的价格就是我这种咸鱼屌丝承担不起的费用了，感谢github——世界上最大的同性交友基地可以给我充当一个小型的服务器。</p>
+<p><strong>使用github搭建个人博客的优点</strong></p>
+<ol>
+<li><p>访问速度快，仓库里只需要放打包好的静态页面</p>
+</li>
+<li><p>构建快，代码push到远程仓库后只需要过几分钟就能访问</p>
+</li>
+<li><p>免费（最主要的原因啊有木有）</p>
+</li>
+<li><p>易于管理（github的分支和版本回退等）</p>
+</li>
+<li><p>可以绑定自己的域名（毕竟域名便宜而服务器不便宜）</p>
+</li>
+</ol>
+<p>常用的博客生成和管理工具有两种，分别是hexo和jekyll。当我还租得起服务器的时候搭建博客用的是jekyll，在接触hexo后我深感jekyll的语法和配置相对复杂。利用hexo搭建博客只需要node环境就可以了（直接下载安装即可），下面我们来进入搭建的步骤。</p>
+<h3 id="需要用到的工具-软件"><a href="#需要用到的工具-软件" class="headerlink" title="需要用到的工具/软件"></a>需要用到的工具/软件</h3><ul>
+<li>Github</li>
+<li>Git</li>
+<li>hexo</li>
+<li>node.js</li>
+</ul>
+<h3 id="预先的准备工作"><a href="#预先的准备工作" class="headerlink" title="预先的准备工作"></a>预先的准备工作</h3><ul>
+<li><p>注册（或回想起）一个Github账号，注册地址：<a target="_blank" rel="noopener" href="https://github.com/">Github</a></p>
+</li>
+<li><p>安装git，可以参考教程如下:<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">git</a></p>
+</li>
+<li><p>安装node，全称默认安装即可，下载地址：<a target="_blank" rel="noopener" href="https://git-scm.com/">node</a></p>
+</li>
+<li><p>【可选】花钱购买一个自己的域名</p>
+<p>好了，前期的准备工作就到这里了，下面我们开始进入安装配置阶段。</p>
+</li>
+</ul>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>git的安装教程可以参考廖雪峰的官方网站（见上方），node下载安装包后直接安装即可，安装完后在命令行界面输入node -v如果出现版本号则安装成功。</p>
+<p>确认git和node安装成功后我们就进入到下一步了。</p>
+<ol>
+<li><p>首先我们需要在自己喜欢的地方新建文件夹，命名为blog（文件名任意），然后进入该文件夹。</p>
+</li>
+<li><p>在blog文件夹中点击鼠标右键，然后选择“Git Bush Here”，到这一步前最后已经在本地Git上绑定了github账号，如果没有还是参考廖雪峰的官方网站。</p>
+</li>
+<li><p>输入<code>npm install hexo -g</code> 安装hexo，其中-g的效果为全局安装hexo。安装完成如下</p>
+</li>
+<li><p>验证安装成功<code>hexo -v</code></p>
+</li>
+<li><p>执行<code>npm init</code>初始化blog文件夹，效果如下</p>
+<p>初始化成功后查看blog文件夹：</p>
+</li>
+<li><p>打开source\_posts可以看到文件夹下有一个名为<code>hello-world.md</code>的文件，这就是初始化blog后生成的样例博客。</p>
+</li>
+<li><p>接下来执行<code>hexo gerenate</code>或<code>hexo g</code>，这条指令的作用是将我们的初始化博客打包成静态页面，这样可以加快打开速度。</p>
+</li>
+<li><p>执行<code>hexo server</code>或<code>hexo s</code>启动本地的服务器（仅在本步使用，用于确定能否正常生成博客，后续会将博客挂到github上），之后打开浏览器输入<code>http://localhost:4000</code>可以看到hexo已经为你生成了一篇博客。（ps：如果界面进不去，可能4000端口被占用，按Ctrl+c结束服务器进程，执行以下指令更改端口号<code>hexo server -p 5000(5000为自己指定的端口号)</code>，然后再次访问时网址后的4000记得换成自己指定的端口号）</p>
+</li>
+<li><p>之后在我们想要写博客的时候，只要打开Git Bush界面，输入<code>hexo new &quot;文件名&quot;</code>就可以新建一个名为“文件名”的md文件，可以在source\_posts中利用记事本打开编辑（不会使用MarkDown的小伙伴需要自己再学习一下了）。然后我们输入<code>http://localhost:4000</code>就可以看到已经生成了一篇新文章“文件名”（我是多脑残才会用这个名字做实例QAQ）</p>
+</li>
+</ol>
+<p>至此，我们已经在本地安装好hexo并且搭建好我们博客的基础框架了。</p>
+<h3 id="链接远程库"><a href="#链接远程库" class="headerlink" title="链接远程库"></a>链接远程库</h3><h3 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h3><h3 id="记录搭建个人博客的过程中踩的坑"><a href="#记录搭建个人博客的过程中踩的坑" class="headerlink" title="记录搭建个人博客的过程中踩的坑"></a>记录搭建个人博客的过程中踩的坑</h3>
+      </div>
       
-        
-        <li class="post-item" data-aos="fade-left">
-          <span class="post-date">11-10</span>
-          <a class="post-title" href="/2020/11/10/hello-world/">Hello World</a>
-        </li>
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>Yuemos</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/2020/11/10/li-yong-hexo-zai-github-shang-da-jian-zi-ji-de-bo-ke/" target="_blank" title="【小白都能看懂的安装教程】利用hexo在github上搭建自己的博课">http://yuemos.top/2020/11/10/li-yong-hexo-zai-github-shang-da-jian-zi-ji-de-bo-ke/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
       
-    </ul>
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <div class="post-nav">
+
+
+
+  <div class="post-nav-next post-nav-item">
+    <a href="/2020/11/10/hello-world/">
+      <span>
+        下一篇:    Hello World 
+      </span>
+    </a>
   </div>
-</section>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-if="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-if="visible">
+      <div class="donate-box_close">
+        <i class="fa fa-times" aria-hidden="true" @click="cancelDialogDrawer"></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-if="tabActive === 'Alipay'">
+          <img src="/medias/zfb.jpg" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-if="tabActive === 'WeChatpay'">
+          <img src="/medias/wx.jpg" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top + 'px; left: 0; overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+
+
+<script src="/js/shareJs/social-share.min.js"></script>
+
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+
+    <!-- 评论 -->
+      
+        
+      
+  </div>
+
+  
+    <div class="toc-aside">
+      <div class="toc-main">
+        <div class="toc-aside-title">
+          <i class="fa fa-list-ul" aria-hidden="true"></i><span>目录</span>
+        </div>
+        <div class="toc-content">
+          <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+<div class="toc"></div>
+
+<script>
+  if ($('.toc').length > 0) {
+    var headerEl = 'h2, h3, h4',  //headers 
+      content = '.post-detail',//文章容器
+      idArr = {};  //标题数组以确定是否增加索引id
+      //add #id
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: content,
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: headerEl,
+      scrollSmooth: true,
+      scrollSmoothOffset: -80,
+      headingsOffset: 130,
+      positionFixedSelector: '.toc-main',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  }
+
+</script>
+
+<style>
+.is-position-fixed {
+  position:fixed !important;
+  top: 64px;
+}
+
+</style>
+        </div>
+      </div>
+    </div>
+  
+</div>
 
     </main>
     <div class="footer bg-color">
