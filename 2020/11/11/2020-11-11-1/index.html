@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Yuemos` Blog</title>
+  <title>/!/[rejected/] master -&gt; master(fetch first)问题的解决方案 | Yuemos` Blog</title>
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
@@ -307,483 +307,260 @@
 </header>
     <main class="main" style="margin-top: 60px;">
       
-<link href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.1/css/swiper.min.css" rel="stylesheet">
 
 
+<div class="post-detail-header" style="background: url(/medias/14.png) no-repeat; background-size: cover; 
+  background-position: center center;">
+  
+    <span class="title">/!/[rejected/] master -&gt; master(fetch first)问题的解决方案</span>
+  
+</div>
+<div class="row justify-center">
+  <div class="main-content">
+    <article class="post post-detail">
+      
+      
+      <div class="post-meta">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <span class="post-time">2020-11-11</span>
+      </div>
+      
+      <div class="post-tags-categories">
+        
+        
+      </div>
+      <div class="post-content">
+        <p>今天在使用git Bash上传文件的时候遇到了如题的错误，查阅文档后基本可以确定是因为github上的远程库与本地库版本不一致导致的，参考网络资料，得到两种解决方案</p>
+<h3 id="温柔型解决方案"><a href="#温柔型解决方案" class="headerlink" title="温柔型解决方案"></a>温柔型解决方案</h3><ol>
+<li>通过<code>git pull</code>先将本地库更新到与远程库一致的版本，但是要注意本地库后来做的修改可能被覆盖，最好使用git fetch(不会自动合并)，查看更新情况再有选择合并，或者先将本地库修改过的文件备份，git pull后再重新修改；</li>
+<li>再次运行git push即可成功</li>
+</ol>
+<h3 id="暴力型解决方案"><a href="#暴力型解决方案" class="headerlink" title="暴力型解决方案"></a>暴力型解决方案</h3><ol>
+<li>git提供了一种强制上传的方式：git push -f ，它会忽略版本不一致等问题，强制将本地库上传的远程库，但是一定要谨慎使用，因为-f会用本地库覆盖掉远程库，如果远程库上有重要更新，或者有其他同伴做的修改，也都会被覆盖，所以一定要在确定无严重后果的前提下使用此操作。</li>
+</ol>
 
-<div class="swiper-length" style="display: none;">0</div>
-<div id="appSwiper"
-  class="swiper-no-swiping"
-  @mouseenter="stopAutoPlay()" 
-  @mouseleave="startAutoPlay()"
->
-  <swiper v-cloak ref="mySwiper" :options="swiperOptions" @slideChangeTransitionEnd="slideChangeTransitionEnd">
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>Yuemos</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/2020/11/11/2020-11-11-1/" target="_blank" title="/!/[rejected/] master -&gt; master(fetch first)问题的解决方案">http://yuemos.top/2020/11/11/2020-11-11-1/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
     
-      <swiper-slide>
-        <div class="item" style="background-image: url('/medias/14.png'); background-size: 40000px; 
-          background-position: center center;">
-            <div class="flag">
-              <div class="img-mask" style="height: 100%;background-image: url('/medias/14.png'); background-size: cover; 
-                background-position: center center;"></div>
-              <!-- <img class="homeSwiper img-mask" src="/medias/5.jpg" alt="" style="width: 100%;background-size: cover; 
-              background-position: center center;"> -->
-              <div class="flag-text">
-                <div>
-                  <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">Yuemos Blog</div>
-                  <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">不定期更新博客</div>
-                </div>
-                <div style="display: flex;">
-                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo" class="read-more border-color bg-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                  <div class="ani animated" style="margin-left: 10px;" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo" class="read-more " style="display: inline-block; z-index:1;border: 1px solid white;">Download theme</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </swiper-slide>
-    
-  </swiper>
+      <div class="post-nav">
+
+  <div class="post-nav-prev post-nav-item">
+    <a href="/2020/11/11/rejected-master-master-fetch-first-wen-ti-de-jie-jue-fang-an/">
+      上一篇:    /!/[rejected/] master -&gt; master(fetch first)问题的解决方案
+    </a>
+  </div>
+
+
+
+  <div class="post-nav-next post-nav-item">
+    <a href="/2020/11/10/li-yong-hexo-zai-github-shang-da-jian-zi-ji-de-bo-ke/">
+      <span>
+        下一篇:    【小白都能看懂的安装教程】利用hexo在github上搭建自己的博客 
+      </span>
+    </a>
+  </div>
+
 </div>
 
-<script src="/js/swiper.min.js"></script>
+    
+    
 
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-if="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-if="visible">
+      <div class="donate-box_close">
+        <i class="fa fa-times" aria-hidden="true" @click="cancelDialogDrawer"></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-if="tabActive === 'Alipay'">
+          <img src="/medias/zfb.jpg" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-if="tabActive === 'WeChatpay'">
+          <img src="/medias/wx.jpg" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
 
-<script src="/js/vue-awesome-swiper.js"></script>
-
-
-<script src="/js/swiper.animate1.0.3.min.js"></script>
-
-<script type="text/javascript">
-  Vue.use(window.VueAwesomeSwiper)
-</script>
 <script>
-  let autoplay = 'true';
-  let delay = '5000';
-  let loop = JSON.parse('true');
-  let effect = 'slide';
-  let swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
+  var body = document.body || document.documentElement || window;
   var vm = new Vue({
-    el: '#appSwiper',
+    el: '#appDonate',
     data: {
-      swiperOptions: {
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true // 允许点击小圆点跳转
-        },
-        loop: loop ? true : false,
-        effect, // fade
-        autoplay: (autoplay && swiperLength > 1) ? {
-  　　　　delay,
-  　　　　disableOnInteraction: false // 手动切换之后继续自动轮播
-    　　} : false,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        on:{
-          init: function() {
-            swiperAnimateCache(this); //隐藏动画元素 
-            swiperAnimate(this); //初始化完成开始动画
-          }, 
-          slideChangeTransitionEnd: function(){ 
-            swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
-          } 
-        }
-        // Some Swiper option/callback...
-      }
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
     },
     computed: {
-      swiper() {
-        return this.$refs.mySwiper.$swiper
-      }
     },
     mounted() {
-      // console.log('Current Swiper instance object', this.swiper)
-      // this.swiper.slideTo(0, 1000, false)
     },
     methods: {
-      stopAutoPlay() {
-        (autoplay && swiperLength > 1) && this.swiper.autoplay.stop();
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top + 'px; left: 0; overflow: hidden;';
       },
-      startAutoPlay() {
-        (autoplay && swiperLength > 1) && this.swiper.autoplay.start();
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
       },
-      slideChangeTransitionEnd() {
-        console.log('1');
+      changeTabActive(name) {
+        this.tabActive = name;
       }
     },
     created() {}
   })
 </script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+
+
+<script src="/js/shareJs/social-share.min.js"></script>
+
+</script>
 
 <style>
-.swiper-container {
-  overflow: hidden;
-}
-.swiper-slide {
-  height: 350px;
-  position: relative;
-}
-.swiper-button-prev,
-.swiper-button-next {
-  padding: 10px 10px;
-  transition: background 0.2s;
-}
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-.swiper-slide .item {
-  width: 100%;
-  height: 100%;
-}
-.flag {
-  position: relative;
-  width: 60%;
-  margin: 0 auto;
-  color: #ffffff;
-  height: 100%;
-  background: #000;
-}
-.flag img {
-  min-height: 100%;
-}
-.flag-text {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  width: 80%;
-  height: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.flag-text .title {
-  font-size: 1.8rem;
-}
-.flag-text .excerpt {
-  width: 70%;
-  line-height: 27px;
-  height: 135px;
-  margin-top: 2%;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-  overflow: hidden;
-}
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  background-color: #42b983;
-}
-.img-mask {
-  opacity:0.6; filter: alpha(opacity=60);
-}
-.flag-text .read-more {
-  margin-bottom: 30px;
-  padding: 5px 15px;
-  color: #ffffff;
-  border-radius: 20px;
-}
-@media (min-width: 992px) {
-  .swiper-button-prev {
-    margin-left: 20%;
-    transform: translateX(-180%);
+  .social-share {
+    margin: 20px 0;
   }
-  .swiper-button-next {
-    margin-right: 20%;
-    transform: translateX(180%);
-  }
-  .flag-text .title {
-    width: 80%;
-    line-height: 35px;
-    max-height: 70px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-}
-@media (max-width: 992px) {
-  .flag {
-    width: 100%;
-  }
-  .flag-text .title {
-    font-size: 1.5rem;
-    margin-top: 50px;
-  }
-  .flag-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 100%;
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
-  .flag-text .excerpt {
-    width: 100%;
-    line-height: 20px;
-    height: 100px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-    overflow: hidden;
-  }
-  .flag-text .read-more {
-    margin-bottom: 80px;
-  }
-}
-@media (max-width: 992px) and (min-width: 551px) {
-  .flag-text .excerpt {
-    width: 70%;
-  }
-}
-@media (max-width: 551px) {
-  .swiper-slide {
-    height: 250px;
-  }
-  .flag-text .title {
-    line-height: 30px;
-    max-height: 60px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    margin-top: 20px;
-  }
-  .flag-text .excerpt {
-    font-size: 1rem;
-    line-height: 20px;
-    height: 80px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-  }
-  .flag-text .excerpt { 
-    margin-top: 10px;
-  }
-  .flag-text .read-more {
-    margin-top: 10px;
-    margin-bottom: 50px;
-  }
-  .swiper-button-prev,
-  .swiper-button-next {
-    transform: scale(0.5);
-  }
-  .swiper-button-prev {
-    left: 0;
-  }
-  .swiper-button-next {
-    right: 0;
-  }
-}
 </style>
 
 
+    
 
-<div class="topArticle" data-aos="fade-up">
-	<h3><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>推荐文章</h3>
-	<div class="articles">
-		
-			
-		
-			
-		
-			
-		
-			
-		
-	</div>
+    <!-- 评论 -->
+      
+        
+      
+  </div>
+
+  
+    <div class="toc-aside">
+      <div class="toc-main">
+        <div class="toc-aside-title">
+          <i class="fa fa-list-ul" aria-hidden="true"></i><span>目录</span>
+        </div>
+        <div class="toc-content">
+          <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+<div class="toc"></div>
+
+<script>
+  if ($('.toc').length > 0) {
+    var headerEl = 'h2, h3, h4',  //headers 
+      content = '.post-detail',//文章容器
+      idArr = {};  //标题数组以确定是否增加索引id
+      //add #id
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: content,
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: headerEl,
+      scrollSmooth: true,
+      scrollSmoothOffset: -80,
+      headingsOffset: 130,
+      positionFixedSelector: '.toc-main',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  }
+
+</script>
+
+<style>
+.is-position-fixed {
+  position:fixed !important;
+  top: 64px;
+}
+
+</style>
+        </div>
+      </div>
+    </div>
+  
 </div>
-
-
-
-
-<section class="posts">
-  
-    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2020-11-11</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2020/11/11/rejected-master-master-fetch-first-wen-ti-de-jie-jue-fang-an/">/!/[rejected/] master -&gt; master(fetch first)问题的解决方案</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
-            </div>
-            <div class="post-categories">
-              
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2020/11/11/rejected-master-master-fetch-first-wen-ti-de-jie-jue-fang-an/" style="background: url('/medias/14.png');background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2020/11/11/rejected-master-master-fetch-first-wen-ti-de-jie-jue-fang-an/">
-            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2020/11/11/rejected-master-master-fetch-first-wen-ti-de-jie-jue-fang-an/" style="background: url('/medias/14.png');background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
-    <article class="post" data-aos="fade-up" style="">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2020-11-11</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2020/11/11/2020-11-11-1/">/!/[rejected/] master -&gt; master(fetch first)问题的解决方案</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
-            </div>
-            <div class="post-categories">
-              
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2020/11/11/2020-11-11-1/" style="background: url('/medias/14.png');background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            今天在使用git Bash上传文件的时候遇到了如题的错误，查阅文档后基本可以确定是因为github上的远程库与本地库版本不一致导致的，参考网络资料，得到两种解决方案
-温柔型解决方案
-通过git pull先将本地库更新到与远程库一致的版本，但
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2020/11/11/2020-11-11-1/">
-            <i class="iconfont iconmore" style="" title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2020/11/11/2020-11-11-1/" style="background: url('/medias/14.png');background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
-    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2020-11-10</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2020/11/10/li-yong-hexo-zai-github-shang-da-jian-zi-ji-de-bo-ke/">【小白都能看懂的安装教程】利用hexo在github上搭建自己的博客</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
-            </div>
-            <div class="post-categories">
-              
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2020/11/10/li-yong-hexo-zai-github-shang-da-jian-zi-ji-de-bo-ke/" style="background: url('/medias/8.png');background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            从高中起养成的写博客的习惯到大学之后就渐渐扔掉了，倒不是说没有什么值得记录的东西了，而是生活中的诱惑多了起来：美食、游戏、旅游……一晃就是三年过去，现在我已经大四，作为一名六年的老程序猿还没有一个自己的博客，真的是天大的罪过。
-之前高中的时
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2020/11/10/li-yong-hexo-zai-github-shang-da-jian-zi-ji-de-bo-ke/">
-            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2020/11/10/li-yong-hexo-zai-github-shang-da-jian-zi-ji-de-bo-ke/" style="background: url('/medias/8.png');background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
-    <article class="post" data-aos="fade-up" style="">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2020-11-10</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2020/11/10/hello-world/">Hello World</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
-            </div>
-            <div class="post-categories">
-              
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            
-              
-              <a href="/2020/11/10/hello-world/" style="background: url('/medias/8.png');background-size: cover; 
-                background-position: center center;">
-              </a>
-            
-          </div>
-          <div class="post-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2020/11/10/hello-world/">
-            <i class="iconfont iconmore" style="" title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        
-          <a href="/2020/11/10/hello-world/" style="background: url('/medias/8.png');background-size: cover; 
-            background-position: center center;">
-          </a>
-        
-      </div>
-    </article>
-  
-</section>
 
     </main>
     <div class="footer bg-color">
