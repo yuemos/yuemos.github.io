@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>/!/[rejected/] master -&gt; master(fetch first)问题的解决方案 | Yuemos` Blog</title>
+  <title>git push时提示/&#34; fatal:The current branch master has no.../&#34; | Yuemos` Blog</title>
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
@@ -309,10 +309,10 @@
       
 
 
-<div class="post-detail-header" style="background: url(/medias/14.png) no-repeat; background-size: cover; 
+<div class="post-detail-header" style="background: url(/medias/3.png) no-repeat; background-size: cover; 
   background-position: center center;">
   
-    <span class="title">/!/[rejected/] master -&gt; master(fetch first)问题的解决方案</span>
+    <span class="title">git push时提示/&#34; fatal:The current branch master has no.../&#34;</span>
   
 </div>
 <div class="row justify-center">
@@ -330,13 +330,12 @@
         
       </div>
       <div class="post-content">
-        <p>今天在使用git Bash上传文件的时候遇到了如题的错误，查阅文档后基本可以确定是因为github上的远程库与本地库版本不一致导致的，参考网络资料，得到两种解决方案</p>
-<h3 id="温柔型解决方案"><a href="#温柔型解决方案" class="headerlink" title="温柔型解决方案"></a>温柔型解决方案</h3><ol>
-<li>通过<code>git pull</code>先将本地库更新到与远程库一致的版本，但是要注意本地库后来做的修改可能被覆盖，最好使用git fetch(不会自动合并)，查看更新情况再有选择合并，或者先将本地库修改过的文件备份，git pull后再重新修改；</li>
-<li>再次运行git push即可成功</li>
-</ol>
-<h3 id="暴力型解决方案"><a href="#暴力型解决方案" class="headerlink" title="暴力型解决方案"></a>暴力型解决方案</h3><ol>
-<li>git提供了一种强制上传的方式：git push -f ，它会忽略版本不一致等问题，强制将本地库上传的远程库，但是一定要谨慎使用，因为-f会用本地库覆盖掉远程库，如果远程库上有重要更新，或者有其他同伴做的修改，也都会被覆盖，所以一定要在确定无严重后果的前提下使用此操作。</li>
+        <p>git push到远程仓库时提示”fatal: The current branch master has no upstream branch. To push the current branch and set the remote as upstream,use git push –set-upstream origin master2，”</p>
+<p>大意是当前分支与远程分支没有建立关联，提示运行git push –set-upstream otigin master2与远程仓库建立联系，运行后即可通过git push推送成功，如果已在远程github仓库中手动建立过同名的本地分支也可通过另外一种方法，即：</p>
+<p><code>git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</code>具体两种方法示例如下：</p>
+<ol>
+<li><code>git push --set-upstream origin master2</code></li>
+<li><code>git push origin master2:master2</code></li>
 </ol>
 
       </div>
@@ -348,7 +347,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2020/11/11/2020-11-11-1/" target="_blank" title="/!/[rejected/] master -&gt; master(fetch first)问题的解决方案">http://yuemos.top/2020/11/11/2020-11-11-1/</a>
+    <a href="/2020/11/11/2020-11-11-2/" target="_blank" title="git push时提示/&#34; fatal:The current branch master has no.../&#34;">http://yuemos.top/2020/11/11/2020-11-11-2/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -364,17 +363,17 @@
       <div class="post-nav">
 
   <div class="post-nav-prev post-nav-item">
-    <a href="/2020/11/11/2020-11-11-2/">
-      上一篇:    git push时提示/&#34; fatal:The current branch master has no.../&#34;
+    <a href="/2020/11/11/rejected-master-master-fetch-first-wen-ti-de-jie-jue-fang-an/">
+      上一篇:    /!/[rejected/] master -&gt; master(fetch first)问题的解决方案
     </a>
   </div>
 
 
 
   <div class="post-nav-next post-nav-item">
-    <a href="/2020/11/10/li-yong-hexo-zai-github-shang-da-jian-zi-ji-de-bo-ke/">
+    <a href="/2020/11/11/2020-11-11-1/">
       <span>
-        下一篇:    【小白都能看懂的安装教程】利用hexo在github上搭建自己的博客 
+        下一篇:    /!/[rejected/] master -&gt; master(fetch first)问题的解决方案 
       </span>
     </a>
   </div>
